@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  description: string = 'Descripción ... '; /* Cambie el texto con la descripción de su proyecto */
 }
