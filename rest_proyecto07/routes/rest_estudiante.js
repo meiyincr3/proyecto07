@@ -9,7 +9,7 @@ router.get('/findAll/json', function(req, res, next) {
     /* MÉTODO ESTÁTICO findAll  */
 
   estudiante.findAll({  
-      attributes: { exclude: ["updatedAt", "createdAt"] } ,
+      attributes: { exclude: ["name"] } ,
   })  
   .then(resultado => {  
       res.json(resultado);  

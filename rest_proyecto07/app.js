@@ -6,9 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var estudianteRouter = require('./routes/rest_estudiante');
+
 
 var app = express();
+
+var estudianteRouter = require('./routes/rest_estudiante');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
