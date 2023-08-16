@@ -10,16 +10,16 @@ module.exports = {
       {
         idestudiante: 1,
         nombre: 'Alice',
-        apellido: 'Stay',
+        //apellido: 'Stay',
         email : 'alice@espol.edu.ec',
-        edad: 25
+        //edad: 25
       },
       {
         idestudiante: 2,
         nombre: 'Bob',
-        apellido: 'Constructor',
+        //apellido: 'Constructor',
         email : 'bob@espol.edu.ec',
-        edad: 28
+        //edad: 28
       }
       ], {});
    },
