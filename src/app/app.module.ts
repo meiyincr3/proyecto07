@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
@@ -14,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatToolbarModule,
     MatCardModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
