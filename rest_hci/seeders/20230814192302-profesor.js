@@ -7,13 +7,11 @@ module.exports = {
 	     
       /* LA ESTRUCTURA DE LOS OBJETOS JSON (CLAVE-VALOR), DE ACUERDO CON EL MODELO RELACIONADO */
       {
-        idprofesor: 1,
         nombre: 'Marisol',
         email : 'marisol@espol.edu.ec',
         especializacion: 'Human Computer Interaction'
       },
       {
-        idprofesor: 2,
         nombre: 'Gabriel',
         email : 'gabriel@espol.edu.ec',
         especializacion: 'Information Security'

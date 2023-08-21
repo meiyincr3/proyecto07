@@ -52,7 +52,7 @@ router.get('/findById/:id/json', function(req, res, next) {
 
 
 // UPDATE - Actualizar un estudiante por ID
-/*router.put('/update/:id', function(req, res, next) {  
+router.put('/update/:id', function(req, res, next) {  
 
   let id = req.params.id;
 
@@ -77,7 +77,7 @@ router.get('/findById/:id/json', function(req, res, next) {
 });
 
 // DELETE - Eliminar un estudiante por ID
-router.delete('/delete/:id', function(req, res, next) {  
+/*router.delete('/delete/:id', function(req, res, next) {  
 
   let id = req.params.id;
 
