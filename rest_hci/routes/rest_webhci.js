@@ -6,9 +6,13 @@ const claseEstudiante = require('../models').estudiante;
 
 
 router.get('/findAll/json', function (req, res, next) {
+  const { rol } = req.user;
+
+  if (rol !== 'admin') {
+      return res.sendStatus(403);
+  }
 
   /* MÉTODO ESTÁTICO findAll  */
-
   claseEstudiante.findAll({
     /*attributes: { exclude: ["nombre"] },*/
   })
@@ -58,6 +62,7 @@ router.put('/update/:id', function(req, res, next) {
 
   claseEstudiante.findByPk(id)
     .then(instancia => {
+      //console.log(instancia)
       if(instancia) {
 
         instancia.update(req.body)
@@ -77,7 +82,7 @@ router.put('/update/:id', function(req, res, next) {
 });
 
 // DELETE - Eliminar un estudiante por ID
-/*router.delete('/delete/:id', function(req, res, next) {  
+router.delete('/delete/:id', function(req, res, next) {  
 
   let id = req.params.id;
 
@@ -101,7 +106,7 @@ router.put('/update/:id', function(req, res, next) {
 
 });
 
-*/
+
 
 
 module.exports = router;
