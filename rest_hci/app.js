@@ -25,9 +25,6 @@ var webhciRouter = require('./routes/rest_webhci');
 /* AGREGUE EL MIDDLEWARE CORS */
 app.use(cors());
 
-/* USE LA FUNCIÓN authenticateJWT */
-app.use('/rest/webhci', authenticateJWT, webhciRouter);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -40,8 +37,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/rest/webhci', webhciRouter);
+app.use('/rest/webhci/', webhciRouter);
 
+/* USE LA FUNCIÓN authenticateJWT */
+//app.use('/rest/webhci/seguridad', authenticateJWT, webhciRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
