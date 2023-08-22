@@ -6,11 +6,11 @@ const claseEstudiante = require('../models').estudiante;
 
 
 router.get('/findAll/json', function (req, res, next) {
-  const { rol } = req.user;
+ /* const { rol } = req.user;
 
   if (rol !== 'admin') {
       return res.sendStatus(403);
-  }
+  }*/
 
   /* MÉTODO ESTÁTICO findAll  */
   claseEstudiante.findAll({
