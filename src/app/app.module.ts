@@ -17,16 +17,12 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from  '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
-import {MatSelectModule} from '@angular/material/select';
-import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgIf, NgFor} from '@angular/common';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ReportComponent,
     AboutComponent,
     MenuComponent
   ],
@@ -42,13 +38,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FlexLayoutModule,
     HttpClientModule,
     MatTableModule,
-    MatSelectModule,
-    NgIf,
-    NgFor,
-    FormsModule,
-    ReactiveFormsModule,
-    FormControl,
-    MatFormFieldModule
+    ReportComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

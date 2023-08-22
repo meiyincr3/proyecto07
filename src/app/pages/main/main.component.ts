@@ -12,7 +12,7 @@ import { DataService } from 'src/app/providers/data.service';
 })
 
 export class MainComponent {
-  public data:Estudiante[] = [];
+  public data: Estudiante[] = [];
   
   /* LISTA CON LOS ATRIBUTOS DE LA INTERFAZ */
   displayedColumns: string[] = ['nombre','email'];
