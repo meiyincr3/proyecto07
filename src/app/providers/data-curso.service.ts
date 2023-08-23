@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-
 //Importación del HttpClient
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
-  private URL: string = 'http://localhost:3000/rest/webhci/findAll/json';
+export class DataCursoService {
+  private URL: string = 'http://localhost:3000/rest/curso/findAll/json';
 
   constructor(private http: HttpClient) { }
   //Método con la petición HTTP
   getResponse() {
     return this.http.get(this.URL);
   }
-
 }

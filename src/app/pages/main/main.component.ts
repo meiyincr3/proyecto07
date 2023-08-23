@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 //Importación de la interfaz
 import {Estudiante} from 'src/app/interfaces/estudiante';
-
+import {Profesor} from 'src/app/interfaces/profesor';
 //Importación del servicio
 import { DataService } from 'src/app/providers/data.service';
+import { DataProfesorService } from 'src/app/providers/data-profesor.service';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +14,7 @@ import { DataService } from 'src/app/providers/data.service';
 
 export class MainComponent {
   public data: Estudiante[] = [];
-  
+
   /* LISTA CON LOS ATRIBUTOS DE LA INTERFAZ */
   displayedColumns: string[] = ['nombre','email'];
 
