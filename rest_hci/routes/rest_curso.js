@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* IMPORTE El ARCHIVO CON EL MODELO */
-const claseProfesor = require('../models').profesor;
+const claseCurso = require('../models').curso;
 
 
 router.get('/findAll/json', function (req, res, next) {
@@ -13,7 +13,7 @@ router.get('/findAll/json', function (req, res, next) {
   }*/
 
   /* MÉTODO ESTÁTICO findAll  */
-  claseProfesor.findAll({
+  claseCurso.findAll({
     /*attributes: { exclude: ["nombre"] },*/
   })
   .then(resultado => {
@@ -23,26 +23,26 @@ router.get('/findAll/json', function (req, res, next) {
 
 });
 
-//  Agregar un nuevo profesor
+//  Agregar un nuevo Curso
 router.post('/save', function(req, res, next) {
-  const { nombre, email, especializacion} = req.body;
+  const { idcurso, nombre_curso, descripcion_curso, nivel_dificultad, profesor} = req.body;
 
-  claseProfesor.create({ nombre,email,especializacion })
-    .then(profesor => {
-      res.status(201).json(profesor);
+  claseCurso.create({ idcurso, nombre_curso, descripcion_curso, nivel_dificultad, profesor })
+    .then(curso => {
+      res.status(201).json(curso);
     })
     .catch(error => {
       console.error(error);
-      res.status(500).json({ error: 'Error al crear el profesor' });
+      res.status(500).json({ error: 'Error al crear el Curso' });
     });
 });
 
-// READ - profesor por ID
+// READ - Curso por ID
 router.get('/findById/:id/json', function(req, res, next) {  
 
   let id = req.params.id;
 
-  claseProfesor.findByPk(id)
+  claseCurso.findByPk(id)
       .then(instancia => {
         if(instancia) {
           res.status(200).json(instancia);
@@ -55,12 +55,12 @@ router.get('/findById/:id/json', function(req, res, next) {
 
 
 
-// UPDATE - Actualizar un profesor por ID
+// UPDATE - Actualizar un Curso por ID
 router.put('/update/:id', function(req, res, next) {  
 
   let id = req.params.id;
 
-  claseProfesor.findByPk(id)
+  claseCurso.findByPk(id)
     .then(instancia => {
       //console.log(instancia)
       if(instancia) {
@@ -81,12 +81,12 @@ router.put('/update/:id', function(req, res, next) {
 
 });
 
-// DELETE - Eliminar un profesor por ID
+// DELETE - Eliminar un Curso por ID
 router.delete('/delete/:id', function(req, res, next) {  
 
   let id = req.params.id;
 
-  claseProfesor.findByPk(id)
+  claseCurso.findByPk(id)
     .then(instancia => {
       if(instancia) {
 

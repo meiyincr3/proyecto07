@@ -20,7 +20,8 @@ var app = express();
 
 //referencia al manejador de rutas
 var webhciRouter = require('./routes/rest_webhci');
-
+var profesorRouter = require('./routes/rest_profesor');
+var cursoRouter = require('./routes/rest_curso');
 
 /* AGREGUE EL MIDDLEWARE CORS */
 app.use(cors());
@@ -38,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/rest/webhci/', webhciRouter);
+app.use('/rest/profesor/', profesorRouter);
+app.use('/rest/curso/', cursoRouter);
 
 /* USE LA FUNCIÓN authenticateJWT */
 //app.use('/rest/webhci/seguridad', authenticateJWT, webhciRouter);
