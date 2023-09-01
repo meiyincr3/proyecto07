@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build --configuration production --base-href/proyecto07" ,
+    "build:prod":"ng build --configuration production --base-href /proyecto07/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build": "ng build",
