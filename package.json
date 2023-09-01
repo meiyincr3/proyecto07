@@ -1,13 +1,13 @@
 {
-  "name": "core-app",
+  "name": "proyecto07",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "packages:install": "npm install sequelize pg && npm install --save-dev sequelize-cli",      
-    "db:reset": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all", 
+    "packages:install": "npm install sequelize pg && npm install --save-dev sequelize-cli",
+    "db:reset": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "start": "npm run packages:install && npm run db:reset && node ./bin/www"
   },
   "private": true,
