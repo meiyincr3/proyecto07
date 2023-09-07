@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private URL: string = 'http://localhost:3000/rest/webhci/findAll/json';
+  private URL: string = 'https://resthci-production.up.railway.app/rest/webhci/findAll/json';
 
   constructor(private http: HttpClient) { }
   //Método con la petición HTTP
