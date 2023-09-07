@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataCursoService {
-  private URL: string = 'http://localhost:3000/rest/curso/findAll/json';
+  private URL: string = 'https://resthci-production.up.railway.app/rest/curso/findAll/json';
 
   constructor(private http: HttpClient) { }
   //Método con la petición HTTP
